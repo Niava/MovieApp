@@ -10,7 +10,7 @@ node_modules
 /coverage
 
 # production
-/dist
+/stan/dist
 
 # misc
 .DS_Store
