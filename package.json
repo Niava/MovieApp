@@ -1,37 +1,23 @@
 {
-  "name": "stan-demo-streaming",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-coding-challenge",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "12.14.1",
-    "npm": "6.13.4"
-  },
-  "dependencies": {
-    "node-sass": "^4.13.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-redux": "^7.2.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.0"
-  },
   "scripts": {
     "start": "node index.js",
-    "build": "react-scripts build && mv build dist",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCT=false npm install && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCT=false npm install --prefix stan && npm run build --prefix stan"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Niava/MovieApp.git"
   },
   "author": "Niava",
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Niava/MovieApp/issues"
+  },
+  "homepage": "https://github.com/Niava/MovieApp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
