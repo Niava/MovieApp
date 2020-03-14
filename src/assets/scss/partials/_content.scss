@@ -1,0 +1,13 @@
+.site__content{
+    .programs__item{
+        display: inline-block;
+        width:33%;
+        height:300px;
+        .programs__container{
+            height:100%;
+            img{
+                height:100%;
+            }
+        }
+    }
+}

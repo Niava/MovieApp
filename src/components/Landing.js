@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Title from './Title';
+import FetchPrograms from '../actions/index';
 
 class Landing extends Component {
-
+    
     render() {
         return (
-            <Title pagetitle="Series" />
+            <main>
+                <Title pagetitle="Title" />
+                <div className="wrapper -padded">
+                    <FetchPrograms category="movies" length="15" />
+                </div>
+            </main >
         );
     }
 }

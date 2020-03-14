@@ -15,8 +15,8 @@ class Header extends Component {
                     possible improvements: use user login status to determine which menu */}
                     <nav className="right site__nav">
                         <ul className="list -inline">
-                            <li className="site__login"><a href="/authenticate" class="link -hover-grey">Log in</a></li>
-                            <li className="site__cta"><a href="/register" class="button -grey">Start your free trial</a></li>
+                            <li className="site__login"><a href="/authenticate" className="link -hover-grey">Log in</a></li>
+                            <li className="site__cta"><a href="/register" className="button -grey">Start your free trial</a></li>
                         </ul>
                     </nav>
                 </div>
