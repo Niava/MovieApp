@@ -4,10 +4,6 @@
   "private": true,
   "description": "",
   "main": "index.js",
-  "engines": {
-    "node": "12.14.1",
-    "npm": "6.13.4"
-  },
   "dependencies": {
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
