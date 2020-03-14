@@ -1,0 +1,101 @@
+footer{
+    .site__links{
+        .list{
+            zoom:1;
+            &:before,
+            &:after{
+                content: "";
+                display: table;
+            }
+            &>li{
+                @include mq('mobile-480','min'){
+                    float: left;
+                    display: block;
+                    width: 50%;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                @include mq('tablet-768','min'){
+                    float: left;
+                    display: block;
+                    width: 33.333333333333336%;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+                @include mq('tablet-1024','min'){
+                    float: none;
+                    display: inline-block;
+                    width: auto;
+                    min-height: 0;
+                    &:after{
+                        content: "|";
+                        display: inline-block;
+                        padding: 0 0.5em 0 0.6em;
+                        color: $footerSeperatorLightGrey;
+                    }
+                    &:last-child:after {
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright{
+        @include font-source-sans($generalText, 12px, $footerLightGrey, 300, auto, none, 1);
+        @include mq('tablet-1024','min'){
+            clear: both;
+            position: absolute;
+            top: 60px;
+            margin: 0;
+            text-align: left;
+        }
+    }
+
+    .social{
+        margin:1em 1em 2em 1em;
+        li{
+            margin-left:1em;
+            &:first-child{
+                margin-left:0;
+            }
+        }
+        @include mq('tablet-768','min'){
+            margin: 2em auto;
+        }
+        @include mq('tablet-1024','min'){
+            float: left;
+            margin: 1em 0;
+            padding: 5px 0;
+        }
+    }
+
+    .store{
+        margin: 1em auto;
+        width: 150px;
+        max-width: 50%;
+        li{
+            margin: 0 0.5em 0.5em;
+        }
+        @include mq('mobile-320','min'){
+            max-width: 320px;
+        }
+        @include mq('mobile-480','min'){
+            width: auto;
+            max-width: 100%;
+        }
+        @include mq('tablet-768','min'){
+            margin: 1em;
+            width:auto;
+            max-width: 100%;
+            li {
+                margin: 0 0.5em;
+            }
+        }
+        @include mq('tablet-1024','min'){
+            float: right;
+            margin: 1em 0;
+        }
+    }
+    
+}

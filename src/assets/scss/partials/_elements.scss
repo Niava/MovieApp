@@ -1,0 +1,178 @@
+//element color
+.gradient{
+    &--blue{
+        @include linearGradient($gradientLightBlue,$gradientDarkBlue);
+        color:#fff;
+    }
+    &--grey{
+        @include linearGradient($gradientLightGrey,$gradientDarkGrey);
+        color:#fff;
+    }
+}
+
+///////padding
+.wrapper{
+    position: relative;
+    display: block;
+    @include mq('tablet-1025','min'){
+        max-width:90%;
+        margin:0 auto;
+    }
+    &.-padded{
+        padding-right: 14px;
+        padding-left: 14px;
+        @include mq('tablet-1024','min'){
+            padding-right: 65px;
+            padding-left: 65px;
+        }
+    }
+}
+
+///////position
+.-fixed{
+    position: fixed;
+    width: 100%;
+    @include transition(background-color 0.25s ease);
+}
+
+.-text-center {
+    text-align: center;
+}
+
+
+//element styling
+.button {
+    display: inline-block;
+    padding: 0 0.75rem;
+    line-height: 1.875rem;
+    border: 1px solid transparent;
+    vertical-align: middle;
+    font-size: 11px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.025em;
+    white-space: nowrap;
+    background-image: none;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    &.-blue{
+        @include linearGradient($gradientLightBlue,$gradientDarkBlue);
+        color:#fff;
+    }
+    &.-grey{
+        @include linearGradient($gradientLightGrey,$gradientDarkGrey);
+        color:#fff;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+.link, 
+a.link, 
+a.link:visited {
+    color: #fff;
+    cursor: pointer;
+    &.-blue{
+        color: $gradientLightBlue;
+    }
+    &.-grey{
+        color: $generalWhiteTrans80;
+    }
+    &.-light{
+        color: $footerLightGrey;
+        @include font-source-sans($generalText, 11px, $footerLightGrey, 300, auto, none, 1);
+    }
+    &.-hover{
+        &-blue{
+            &:hover,
+            &active{
+                color: $gradientLightBlue;
+            }
+        }
+        &-grey{
+            &:hover,
+            &active{
+                color: $generalWhiteTrans80;
+            }
+        }
+        &-light{
+            &:hover,
+            &active{
+                color: $footerLightGrey;
+            }
+        }
+    }
+}
+
+.list, 
+.cta-platform__list, 
+.cta__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &.-inline>li{
+        display: inline-block;
+    }
+}
+
+
+
+//////social icons
+.icon{
+    &--social,
+    &--store{
+        background-repeat: no-repeat;
+        background-color: transparent;
+        background-position: center center;
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        vertical-align: middle;
+        border:0;
+        overflow: hidden;
+        text-decoration: none;
+        &:before{
+            content: "";
+            display: block;
+            width: 0;
+            height: 150%;
+        }
+    }
+    &--social{
+        width: 30px;
+        height: 30px;
+        background-size:auto 100%;
+        &.-facebook{
+            background-image:url("../../social/facebook-white.svg");
+        }
+        &.-twitter{
+            background-image:url("../../social/twitter-white.svg");
+        }
+        &.-instagram{
+            background-image:url("../../social/instagram-white.svg");
+        }
+    }
+    &--store{
+        height:40px;
+        width:100%;
+        background-size:135px 40px;
+        &.-ios{
+            width:135px;
+            background-image: url("../../store/app-store.svg");
+        }
+        &.-android{
+            width:135px;
+            background-image: url("../../store/play-store.svg");
+        }
+        &.-microsoft{
+            width:112px;
+            background-image: url("../../store/windows-store.svg");
+        }
+    }
+}
