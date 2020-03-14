@@ -2,8 +2,6 @@
   "name": "stan-demo-streaming",
   "version": "0.1.0",
   "private": true,
-  "description": "",
-  "main": "index.js",
   "dependencies": {
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
