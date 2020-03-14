@@ -11,16 +11,8 @@
     "start": "node index.js",
     "heroku-postbuild": "NPM_CONFIG_PRODUCT=false npm install --prefix stan && npm run build --prefix stan"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Niava/MovieApp.git"
-  },
   "author": "Niava",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Niava/MovieApp/issues"
-  },
-  "homepage": "https://github.com/Niava/MovieApp#readme",
   "dependencies": {
     "express": "^4.17.1"
   }
