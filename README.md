@@ -44,6 +44,11 @@ This project was built with [Create React App](https://github.com/facebook/creat
 - Attributes include `title` and (`images` → `Poster Art` → `url`).
 
 ["Movies" page](https://stan-demo-streaming.herokuapp.com/movies)
+- Filtered by `programType` of `movie`.
+- `releaseYear >= 2010`.
+- Sorted by the `title` attribute.
+- Display the first 21 entries.
+- Attributes include `title` and (`images` → `Poster Art` → `url`).
 
 "Loading" & "Error" page
 - Loading page will be display when the page is loading. (Might be able to have a quick peak at it when first open the page or we can put `debug` in [Fetch Json Function](https://github.com/Niava/MovieApp/blob/master/stan/src/actions/index.js) to stop it before loading).
@@ -78,17 +83,18 @@ To open the site once published, run command:
 Please use the source folder located in `/stan`.
 
 
-## My Portfolios:
+## Other Notes
 
-Link to my [portfolio site](https://www.mengqiuniu.com/).
+### My Portfolios
+
+Please refer to my [portfolio site](https://www.mengqiuniu.com/).
 
 **Note: please check the sites filtered by `FEATURE`**
 
-And the one we do daily feature updates regularly is 
-
+And the one we do daily feature updates is 
 - [NATIONAL PRODUCT REVIEW](https://www.nationalproductreview.com/) with lots interesting features like AR and REVIEWS.
+
+The sites we spent some time on
 - [VIDDI](https://viddi.co/). This site is built with more UI/UX designs and animations.
-
-
-
+- [IFB](https://www.mengqiuniu.com/collections/wordpress/products/images-for-business). An image heavy site.
 
