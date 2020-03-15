@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Header from './Header';
 import Landing from './Landing';
-
+import Movies from './Movies';
+import Series from './Series';
 import Footer from './Footer';
-// src={logo}
-const Series = () => <h2>Dashboard</h2>
-const Movies = () => <h2>SurveyNew</h2>
 
 class App extends Component {
   componentDidMount() {

@@ -30,15 +30,21 @@ header{
                 ul.list{
                     li.site{
                         &__login {
-                            padding-right: 12px;
                             @include font-source-sans($generalText, 14px, $generalWhite, 400, 2rem, none, 1);
                             @include text-shadow(1px 1px 2px rgba(0,0,0,0.47));
+                            @include mq('tablet-768','min'){
+                                padding-right: 12px;
+                            }
                         }
                         &__cta{
                             padding-left: 1em;
+                            display:none;
                             a.button{
                                 @include font-source-sans($generalText, 14px, $generalWhite, 400, 2rem, none, 1);
                                 @include text-shadow(1px 1px 2px rgba(0,0,0,0.47));
+                            }
+                            @include mq('mobile-480','min'){
+                                display: inline-block;
                             }
                         }
                     }

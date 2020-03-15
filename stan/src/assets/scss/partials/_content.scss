@@ -1,13 +1,79 @@
 .site__content{
-    .programs__item{
-        display: inline-block;
-        width:33%;
-        height:300px;
-        .programs__container{
-            height:100%;
-            img{
-                height:100%;
+    .programs{
+        &__wrapper{
+            padding-top:35px;
+            padding-bottom:45px;
+        }
+        &__list{
+            display: block;
+            position: relative;
+        }
+        &__item{
+            display: inline-block;
+            width:33.333333%;
+            position: relative;
+            padding:0 4px;
+            vertical-align: top;
+            @include mq('mobile-480','min'){
+                width:25%;
+            }
+            @include mq('tablet-1024','min'){
+                width:14.2%;
             }
         }
+        &__container{
+            position: relative;
+            .title{
+                @include font-source-sans($generalText, 12px, $gradientDarkGrey, 300, 1rem, capitalize, 1);
+                padding-top:8px;
+                padding-bottom:30px;
+            }
+        }
+        &__media{
+            position: relative;
+            opacity:1;
+            @include box-shadow(0 1px 2px rgba(0,0,0,0.2));
+            @include transition(opacity 0.3s ease);
+            @include animation(fadeIn .5s);
+            background-image: url(../../placeholder.png);
+            background-size:200%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: $footerBgGrey;
+            &:before{
+                display: block;
+                padding-top: 150%;
+                content: "";
+            }
+            img{
+                opacity:1;
+                display: block;
+                position: absolute;
+                top:0;
+                left:0;
+                bottom:0;
+                right:0;
+                margin:auto;
+                width:100%;
+                height:auto;
+                filter:none;
+            }
+            span{
+                @include font-source-sans($generalText, 22px, $generalWhite, 500, auto, uppercase, 1);
+                position: absolute;
+                top:50%;
+                left:50%;
+                @include transform(translate(-50%,-50%));
+            }
+        }
+        &__links{
+            cursor: pointer;
+            &:hover{
+                .programs__media{
+                    opacity: 0.8;
+                }
+            }
+        }
+        
     }
 }

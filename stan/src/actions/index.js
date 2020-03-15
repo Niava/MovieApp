@@ -18,18 +18,21 @@ class FetchPrograms extends Component {
             })
             .then(
                 parsedJSON => {
-                    // sorting by title
-                    console.log(parsedJSON.entries);
+                    //retrive via category
+                    const programByCategory = [];
                     parsedJSON.entries.map(movie => {
-                        if(movie.programType === category){
-                            return movie;
+                        if (movie.programType === category && movie.releaseYear >= 2010){
+                            programByCategory.push(
+                                movie
+                            );
                         }
                     });
-                    parsedJSON.entries.sort(function (a, b) {
+                    // sorting by title
+                    programByCategory.sort(function (a, b) {
                         return (a.title.toUpperCase() < b.title.toUpperCase()) ? -1 : (a.title.toUpperCase() > b.title.toUpperCase()) ? 1 : 0;
                     });
                     this.setState({
-                        movies: parsedJSON.entries,
+                        movies: programByCategory,
                         isLoading: false
                     });
                     
@@ -51,10 +54,10 @@ class FetchPrograms extends Component {
     render() {
         const { movies } = this.state;
         if (this.state.error) {
-            return <div className="status">Oops, something went wrong</div>;
+            return <div className="programs__wrapper status">Oops, something went wrong</div>;
         }
         if (this.state.isLoading) {
-            return <div className="status">Loading...</div>;
+            return <div className="programs__wrapper status">Loading...</div>;
         }
         return (
             <div className="programs__wrapper">
@@ -62,10 +65,14 @@ class FetchPrograms extends Component {
                     {
                     movies.map((movie, i) => {
                         return (
-                            i <= parseInt(this.props.length) ? (
-                                <li key={i} className="programs__item">
+                            i < parseInt(this.props.length) ? (
+                                <li data-item-index={i} className="programs__item">
                                     <div className="programs__container">
-                                        <img className={movie.programType} src={movie.images["Poster Art"].url} alt={movie.title} />
+                                        <a href="/" className="programs__links">
+                                            <div className="programs__media">
+                                                <img className="programs__imgholder" src={movie.images["Poster Art"].url} />
+                                            </div> 
+                                        </a>
                                         <div className="title">{movie.title}</div>
                                     </div>
                                 </li>

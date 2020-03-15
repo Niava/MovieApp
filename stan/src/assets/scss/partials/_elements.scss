@@ -157,6 +157,17 @@ a.link:visited {
         &.-instagram{
             background-image:url("../../social/instagram-white.svg");
         }
+        &:hover{
+            &.-facebook{
+            background-image:url("../../social/facebook-blue.svg");
+            }
+            &.-twitter{
+                background-image:url("../../social/twitter-blue.svg");
+            }
+            &.-instagram{
+                background-image:url("../../social/instagram-blue.svg");
+            }
+        }
     }
     &--store{
         height:40px;
