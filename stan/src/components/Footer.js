@@ -8,9 +8,9 @@ class Footer extends Component {
                     <nav className ="site__links">
                         <ul className ="list">
                             <li><a className ="link -light -hover-blue" href="/">Home</a></li>
-                            <li><a className ="link -light -hover-blue" href="/terms">Terms and Conditions</a></li>
-                            <li><a className ="link -light -hover-blue" href="/privacy-policy">Privacy Policy</a></li>
-                            <li><a className ="link -light -hover-blue" href="/collection-statement">Collection Statement</a></li>
+                            <li><a className ="link -light -hover-blue" href="/">Terms and Conditions</a></li>
+                            <li><a className ="link -light -hover-blue" href="/">Privacy Policy</a></li>
+                            <li><a className ="link -light -hover-blue" href="/">Collection Statement</a></li>
                             <li><a className ="link -light -hover-blue" href="/">Help</a></li>
                             <li><a className ="link -light -hover-blue" href="/">Manage Account</a></li>
                         </ul>
@@ -25,7 +25,7 @@ class Footer extends Component {
                         <ul className ="list -inline store -text-center">
                             <li><a className ="icon--store -ios" href="https://itunes.apple.com/au/app/stan./id948095331?ls=1&amp;mt=8" target="_blank" rel="noopener noreferrer">Stan on iOS</a></li>
                             <li><a className ="icon--store -android" href="https://play.google.com/store/apps/details?id=au.com.stan.and" target="_blank" rel="noopener noreferrer">Stan on Android</a></li>
-                            <li><a className ="icon--store -microsoft" href="https://www.microsoft.com/en-au/p/stan/" target="_blank" rel="noopener noreferrer">Stan on Microsoft</a></li>
+                            <li><a className="icon--store -microsoft" href="https://www.microsoft.com/en-au/p/stan/9nblggh4wz0p" target="_blank" rel="noopener noreferrer">Stan on Microsoft</a></li>
                         </ul>
                     </div>
 
