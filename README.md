@@ -85,16 +85,3 @@ Please use the source folder located in `/stan`.
 
 ## Other Notes
 
-### My Portfolios
-
-Please refer to my [portfolio site](https://www.mengqiuniu.com/).
-
-**Note: please check the sites filtered by `FEATURE`**
-
-And the one we do daily feature updates is 
-- [NATIONAL PRODUCT REVIEW](https://www.nationalproductreview.com/) with lots interesting features like AR and REVIEWS.
-
-The sites we spent some time on
-- [VIDDI](https://viddi.co/). This site is built with more UI/UX designs and animations.
-- [IFB](https://www.mengqiuniu.com/collections/wordpress/products/images-for-business). An image heavy site.
-
